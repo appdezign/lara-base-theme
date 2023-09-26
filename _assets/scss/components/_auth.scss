@@ -1,0 +1,36 @@
+.front-login-page {
+	background-color: $lara-primary-dark;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: center;
+
+	.front-login-page-gradient-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($lara-primary-dark, 0.7);
+	}
+}
+.was-validated {
+	.password-toggle {
+		.form-control {
+			&:invalid + .password-toggle-btn,
+			&.is-invalid + .password-toggle-btn,
+			&:valid + .password-toggle-btn,
+			&.is-valid + .password-toggle-btn {
+				right: 0.625rem;
+			}
+		}
+	}
+}
+
+@media(max-width: 992px) {
+	.login-widget-dropdown  {
+		.dropdown-toggle {
+			&::after {
+				display:none;
+
+			}
+		}
+	}
+}
