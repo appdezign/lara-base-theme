@@ -27,15 +27,15 @@
 		"laravel": {
 			"providers": [
 				"LaraBaseServiceProvider"
+			],
+			"dont-discover": [
+				"appdezign/lara-base-theme"
+
 			]
 		},
 		"installer-paths": {
-			"laracms/core": [
-				"appdezign/lara-cms"
-			],
 			"laracms/themes/{$name}": [
 				"appdezign/lara-base-theme",
-				"appdezign/lara-demo-theme"
 			]
 		}
 	}
