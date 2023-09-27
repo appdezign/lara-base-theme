@@ -35,7 +35,7 @@
 		},
 		"installer-paths": {
 			"laracms/themes/{$name}": [
-				"appdezign/lara-base-theme",
+				"appdezign/lara-base-theme"
 			]
 		}
 	}
