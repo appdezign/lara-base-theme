@@ -17,9 +17,9 @@ class LaraBaseServiceProvider extends ServiceProvider
 
 		// Publish Assets
 		$this->publishes([
-			__DIR__.'/../_assets/_public/fonts' => public_path('assets/themes/basefive/fonts'),
-			__DIR__.'/../_assets/_public/images' => public_path('assets/themes/basefive/images'),
-			__DIR__.'/../_assets/_public/vendor' => public_path('assets/themes/basefive/js/vendor'),
+			__DIR__.'/../_assets/_public/fonts' => public_path('assets/themes/base/fonts'),
+			__DIR__.'/../_assets/_public/images' => public_path('assets/themes/base/images'),
+			__DIR__.'/../_assets/_public/vendor' => public_path('assets/themes/base/js/vendor'),
 			__DIR__.'/../_assets/_public/media' => public_path('assets/media'),
 		], 'lara');
 
