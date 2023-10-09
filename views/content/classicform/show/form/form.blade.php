@@ -14,7 +14,7 @@
 @endif
 
 
-{{ html()->form('POST', route('admin.'.$entity->getEntityRouteKey().'.store'))
+{{ html()->form('POST', route('form.'.$entity->getEntityKey().'.process'))
 		->id($entity->getEntityKey() . '-form')
 		->attributes(['accept-charset' => 'UTF-8'])
 		->class('lara-system-form needs-validation')

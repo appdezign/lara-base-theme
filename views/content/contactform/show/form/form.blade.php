@@ -3,7 +3,7 @@
 	{!! Theme::css('vendor/flatpickr/flatpickr.min.css') !!}
 @endsection
 
-{{ html()->form('POST', route('admin.'.$entity->getEntityRouteKey().'.store'))
+{{ html()->form('POST', null)
 		->id($entity->getEntityKey() . '-form')
 		->attributes(['accept-charset' => 'UTF-8'])
 		->class('lara-system-form needs-validation needs-custom-validation')
