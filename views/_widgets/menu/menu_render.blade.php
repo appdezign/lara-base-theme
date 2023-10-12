@@ -8,7 +8,7 @@ if ($node->isLeaf() || sizeof($node->children) == 0) {
 }
 
 if ($node->isRoot()) {
-	$nodeHasChildren = false;
+	$nodeHasChildren = true;
 }
 ?>
 
@@ -16,7 +16,7 @@ if ($node->isRoot()) {
 
 	{{-- home --}}
 	<li class="nav-item" id="menu-item-{{ $node->id }}">
-		<a href="{{ url($lang . '/') }}" @if(sizeof($activemenu) == 1) class="active" @endif >
+		<a href="{{ url($lang . '/') }}" class="nav-link @if(sizeof($activemenu) == 1) active @endif">
 			{{ $node->title }}
 		</a>
 	</li>
