@@ -1,39 +1,49 @@
+<?php if ($data->gridvars) require($data->gridvars); ?>
+<?php if ($data->override) require($data->override); ?>
+
 @include('larawidget', ['hook' => 'content_top'])
 
-<section class="{{ $data->grid->module }}">
-	<div class="{{ $data->grid->container }}">
+<section class="{{ $grd->module }}">
+	<div class="{{ $grd->container }}">
+
+		<div class="row">
+			<div class="col-12 col-lg-9 offset-lg-3">
+				{{-- Page Title --}}
+				<div class="row">
+					<div class="{{ $grd->gridColumns }}">
+
+						<div class="d-flex justify-content-between mb-48">
+							<div class="page-title">
+								<h1 class="mb-2 mb-md-0">{{ $data->page->title }}</h1>
+							</div>
+							<div class="d-none d-lg-flex align-items-center">
+								<a href="{{ route('entitytag.'.$entity->getEntityKey().'.index', ['view' => 'list']) }}"
+								   class="nav-link me-16 p-0 @if(!$isGrid) active @endif">
+									<i class="fas fa-list @if(!$isGrid) color-primary @else text-muted @endif"></i>
+								</a>
+								<a href="{{ route('entitytag.'.$entity->getEntityKey().'.index', ['view' => 'grid']) }}"
+								   class="nav-link p-0 @if($isGrid) active @endif">
+									<i class="fas fa-th @if($isGrid) color-primary @else text-muted @endif"></i>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="row">
 
 			{{-- Force Sidebar Left --}}
 			@include('content._sidebars.left_tags')
 
-			<div class="col-sm-9 main-content">
-
-				{{-- Page Title --}}
-				<div class="row mb-48">
-					<div class="{{ $data->grid->gridcolumns }} text-center">
-
-						<h1 class="lara-object-title">
-							{{ $data->page->title }}
-						</h1>
-
-						{{-- FEATURED IMAGE --}}
-						@if($data->page->hasFeatured() && !$data->page->heroIsFeatured())
-							<figure class="mb-48">
-								@include('_img.lazy', ['lzobj' => $data->page->featured, 'lzw' => 1280, 'lzh' => 640, 'ar' => '2x1'])
-							</figure>
-						@endif
-
-						{!! $data->page->body !!}
-
-					</div>
-				</div>
+			<div class="col-lg-9 main-content">
 
 				{{-- Tag children --}}
 				@if(!empty($data->children))
 					<div class="row">
-						<div class="{{ $data->grid->gridcolumns }}">
+						<div class="{{ $grd->gridColumns }}">
 							<ul>
 								@foreach($data->children as $child)
 									<li>
@@ -46,12 +56,12 @@
 				@endif
 
 				{{-- Filtered Object List --}}
-				@if($data->params->isgrid)
+				@if($isGrid)
 					<div class="row">
-						<div class="{{ $data->grid->gridcolumns }} text-center">
-							<div class="row multi-columns-row">
+						<div class="{{ $grd->gridColumns }}">
+							<div class="row @if($data->params->gridcols > 1) row-cols-lg-{{ $data->params->gridcols }} @else row-cols-lg-3 @endif row-cols-sm-2 row-cols-1 gy-md-24 gy-8">
 								@foreach($data->objects as $obj)
-									<div class="col-sm-{{ $data->params->gridcol }} col-md-{{ $data->params->gridcol }} col-lg-{{ $data->params->gridcol }}">
+									<div class="col pb-3">
 										@include('content.' . $entity->getEntityKey() . '.index.object.grid_object')
 									</div>
 								@endforeach
@@ -60,7 +70,7 @@
 					</div>
 				@else
 					<div class="row">
-						<div class="{{ $data->grid->gridcolumns }}">
+						<div class="{{ $grd->gridColumns }}">
 							@foreach($data->objects as $obj)
 								<div class="row">
 									<div class="col-sm-12">
@@ -74,8 +84,8 @@
 
 				{{-- Pagination --}}
 				@if($data->params->paginate)
-					<div class="row">
-						<div class="{{ $data->grid->gridcolumns }} text-center">
+					<div class="row mt-48">
+						<div class="{{ $grd->gridColumns }} text-center">
 							{{ $data->objects->links('_partials.misc.pagination') }}
 						</div>
 					</div>
