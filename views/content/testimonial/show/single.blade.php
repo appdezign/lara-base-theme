@@ -1,21 +1,18 @@
-<section class="{{ $data->grid->module }}">
-	<div class="{{ $data->grid->container }}">
+<?php if($data->gridvars) require($data->gridvars); ?>
+<?php if($data->override) require($data->override); ?>
+
+<section class="{{ $grd->module }} pt-0">
+	<div class="{{ $grd->container }}">
 
 		<div class="row">
 
 			{{-- Sidebar Left --}}
-			@includeWhen($data->grid->sidebarleft, 'content._sidebars.left_default')
+			@includeWhen($grd->hasSidebarLeft, $grd->leftSidebar)
 
-			<div class="{{ $data->grid->contentcols }} main-content">
+			<div class="{{ $grd->contentCols }} main-content">
 
 				<div class="row">
-					<div class="{{ $data->grid->gridcolumns }}">
-						<a href="{{ $data->entityListUrl }}"
-						   class="btn btn-base btn-outline float-end">{{ _lanq('lara-front::default.button.go_back') }}</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="{{ $data->grid->gridcolumns }}">
+					<div class="{{ $grd->gridColumns }}">
 
 						@include('content.' . $entity->getEntityKey() . '.show.object.single_object')
 
@@ -24,7 +21,7 @@
 
 				@if($data->params->prevnext)
 					<div class="row">
-						<div class="{{ $data->grid->gridcolumns }}">
+						<div class="{{ $grd->gridColumns }}">
 							@include('content._partials.single_prevnext')
 						</div>
 					</div>
@@ -33,7 +30,7 @@
 			</div>
 
 			{{-- Sidebar Right --}}
-			@includeWhen($data->grid->sidebarright, 'content._sidebars.right_default')
+			@includeWhen($grd->hasSidebarRight, $grd->rightSidebar)
 
 		</div>
 

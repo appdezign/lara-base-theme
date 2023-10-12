@@ -5,7 +5,7 @@
 		   class="position-absolute top-0 start-0 w-100 h-100"
 		   aria-label="Read more"></a>
 
-		@include('_img.youtube', ['ytcode' => $obj->youtubecode, 'ytsize' => 0, 'ytw' => 480, 'yth' => 360])
+		@include('_img.youtube', ['ytcode' => $obj->video->youtubecode, 'ytsize' => 0, 'ytw' => 480, 'yth' => 360])
 
 	</div>
 	<div class="card-body text-center pb-24">
