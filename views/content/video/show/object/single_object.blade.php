@@ -1,4 +1,3 @@
-
 <div class="mt-24 pt-lg-8 pb-16">
 
 	<a href="{{ $data->entityListUrl }}"
@@ -8,13 +7,14 @@
 
 	<h1 class="pb-16">{{ $data->object->title }}</h1>
 
-
 	{{-- YOUTUBE VIDEO --}}
-	<div class="ratio ratio-16x9 mt-48 mb-48">
-		<iframe width="560" height="315"
-		        src="https://www.youtube.com/embed/{{ $data->object->video->youtubecode }}?rel=0"
-		        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	</div>
+	@if($data->object->hasVideos())
+		<div class="ratio ratio-16x9 mt-48 mb-48">
+			<iframe width="560" height="315"
+			        src="https://www.youtube.com/embed/{{ $data->object->video->youtubecode }}?rel=0"
+			        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	@endif
 
 	{{-- FEATURED IMAGE --}}
 	@if($data->object->hasFeatured() && !$data->object->heroIsFeatured())
