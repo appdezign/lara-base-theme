@@ -11,7 +11,6 @@
 @include('_partials._seo.og_meta_tags')
 
 @include('_partials._google.ga4')
-@include('_partials._google.gtm1')
 
 <!-- Favicon and Touch Icons -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ Theme::url('favicon/apple-touch-icon.png') }}">
