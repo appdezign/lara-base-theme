@@ -1,5 +1,5 @@
-<?php if($data->gridvars) require($data->gridvars); ?>
-<?php if($data->override) require($data->override); ?>
+<?php if ($data->gridvars) require($data->gridvars); ?>
+<?php if ($data->override) require($data->override); ?>
 
 @include('larawidget', ['hook' => 'content_top'])
 

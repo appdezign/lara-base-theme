@@ -9,9 +9,30 @@ $extraClasses = (isset($cl)) ? $cl : '';
 $hasContainer = (isset($cnt)) ? $cnt : false;
 $containerClass = (isset($cntclass)) ? $cntclass : false;
 ?>
-@if($forceCropping)
-	@if($hasContainer)
-		<div class="img-container {{ $containerClass }}" style="width:{{ $dw }}px; height:{{ $dh }}px">
+
+@if($lzh == 0)
+	{{-- no cropping, no ratio --}}
+	<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
+	     width="{{ $displaywidth }}"
+	     height="{{ $displaywidth }}"
+	     title="{{ $lzobj->image_title }}"
+	     alt="{{ $lzobj->image_alt }}"
+	     class="lazyload {{ $extraClasses }}"/>
+@else
+
+	@if($forceCropping)
+		@if($hasContainer)
+			<div class="img-container {{ $containerClass }}" style="width:{{ $dw }}px; height:{{ $dh }}px">
+				<div class="ratio ratio-{{ $aspectRatio }}">
+					<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
+					     width="{{ $displaywidth }}"
+					     height="{{ $displayheight }}"
+					     title="{{ $lzobj->image_title }}"
+					     alt="{{ $lzobj->image_alt }}"
+					     class="lazyload {{ $extraClasses }}"/>
+				</div>
+			</div>
+		@else
 			<div class="ratio ratio-{{ $aspectRatio }}">
 				<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
 				     width="{{ $displaywidth }}"
@@ -20,22 +41,14 @@ $containerClass = (isset($cntclass)) ? $cntclass : false;
 				     alt="{{ $lzobj->image_alt }}"
 				     class="lazyload {{ $extraClasses }}"/>
 			</div>
-		</div>
+		@endif
 	@else
-		<div class="ratio ratio-{{ $aspectRatio }}">
-			<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
-			     width="{{ $displaywidth }}"
-			     height="{{ $displayheight }}"
-			     title="{{ $lzobj->image_title }}"
-			     alt="{{ $lzobj->image_alt }}"
-			     class="lazyload {{ $extraClasses }}"/>
-		</div>
+		<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
+		     width="{{ $displaywidth }}"
+		     height="{{ $displaywidth }}"
+		     title="{{ $lzobj->image_title }}"
+		     alt="{{ $lzobj->image_alt }}"
+		     class="lazyload {{ $extraClasses }}"/>
 	@endif
-@else
-	<img data-src="{{ _cimg($lzobj->filename, $dim['w'], $dim['h'], null, $dim['f']) }}"
-	     width="{{ $displaywidth }}"
-	     height="{{ $displaywidth }}"
-	     title="{{ $lzobj->image_title }}"
-	     alt="{{ $lzobj->image_alt }}"
-	     class="lazyload {{ $extraClasses }}"/>
+
 @endif
