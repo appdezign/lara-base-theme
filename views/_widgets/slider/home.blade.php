@@ -7,7 +7,7 @@
 				"loop": true,
 				"speed": 800,
 				"autoplay": {
-					"delay": 4000,
+					"delay": 6000,
 					"disableOnInteraction": false
 				},
 				"pagination": {
