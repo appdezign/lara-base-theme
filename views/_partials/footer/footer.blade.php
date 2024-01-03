@@ -22,10 +22,14 @@
 				</div>
 			</div>
 		</div>
-		<p class="nav d-block fs-xs text-center text-md-start pb-8 pb-lg-0 mb-0">
-			<span class="text-light opacity-50">&copy; All rights reserved. Created by </span>
-			<a class="nav-link d-inline-block p-0" href="https://firmaq.nl/nl/" target="_blank" rel="noopener">Firmaq Media</a>
-		</p>
+		<div class="row">
+			<div class="col-md-6 ">
+				<p>&copy; {{ date('Y') }}, {{ $settngz->company_name }}</p>
+			</div>
+			<div class="col-md-6 text-end">
+				<p>Realisatie: <a href="https://firmaq.nl/nl/" target="_blank">Firmaq Media</a></p>
+			</div>
+		</div>
 	</div>
 </footer>
 

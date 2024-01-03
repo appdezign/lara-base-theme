@@ -91,6 +91,126 @@
 
 }
 
+.payoff {
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+
+	&.payoff-full {
+		padding: 0 !important;
+
+		&.payoff-center {
+			.payoff-inner {
+				.payoff-content {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	&.payoff-center {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.payoff-left {
+		.payoff-inner {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&.payoff-right {
+		.payoff-inner {
+			width: 100%;
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	.payoff-inner {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 1.5rem;
+	}
+
+	.payoff-content {
+		h2 {
+			font-size: 24px;
+			font-weight: 800;
+			color: $white;
+		}
+
+		.payoff-link {
+			color: $white;
+		}
+	}
+}
+
+@media(min-width: 480px) {
+	.payoff {
+		.payoff-content {
+			h2 {
+				font-size: 36px;
+			}
+		}
+	}
+}
+
+@media(min-width: 768px) {
+	.payoff {
+		padding: 2.25rem;
+
+		&.payoff-full {
+			padding: 0 !important;
+		}
+
+		&.payoff-left {
+			.payoff-inner {
+				width: 50%;
+				text-align: left;
+			}
+		}
+
+		&.payoff-right {
+			.payoff-inner {
+				width: 50%;
+				margin: 0 0 0 auto;
+				text-align: left;
+			}
+		}
+
+		.payoff-content {
+			h2 {
+				font-size: 48px;
+			}
+		}
+	}
+}
+
+@media(min-width: 1200px) {
+	.payoff {
+		&.payoff-full {
+			&.payoff-center {
+				.payoff-inner {
+					.payoff-content {
+						width: 80%;
+						max-width: 720px;
+					}
+				}
+			}
+		}
+		.payoff-content {
+			h2 {
+				font-size: 60px;
+			}
+		}
+	}
+}
+
 .hero-h20 {
 	height: 20vh;
 }

@@ -41,7 +41,7 @@
 		<h2 class="h1 mb-lg-48 mb-24 pb-lg-0 pb-md-8 text-center">Сustom Software Solutions</h2>
 
 		<div class="swiper-aos" data-aos="fade-up">
-			<div class="swiper mb-xl-16" data-swiper-options='{
+			<div class="js-swiper swiper mb-xl-16" data-swiper-options='{
 	          "spaceBetween": 24,
 	          "speed": 800,
 	          "autoplay": {

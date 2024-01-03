@@ -6,19 +6,15 @@
 
 		<div class="row">
 
+			{{-- Sidebar Left --}}
+			@includeWhen($grd->hasSidebarLeft, 'content._sidebars.left_default')
+
 			<div class="{{ $grd->contentCols }} main-content">
 
-				{{-- Page Title --}}
 				<div class="row">
 					<div class="{{ $grd->gridColumns }}">
-						<div class="page-title mb-48">
-							<h1 class="mb-2 mb-md-0">{{ $data->page->title }}</h1>
-						</div>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="{{ $grd->gridColumns }}">
+						<h1>{{ $data->page->title }}</h1>
 
 						@include('content.' . $entity->getEntityKey() . '.show.form.form')
 
@@ -26,6 +22,9 @@
 				</div>
 
 			</div>
+
+			{{-- Sidebar Right --}}
+			@includeWhen($grd->hasSidebarRight, 'content._sidebars.right_default')
 
 		</div>
 
