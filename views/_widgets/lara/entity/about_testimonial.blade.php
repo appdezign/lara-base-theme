@@ -27,7 +27,7 @@
 					</div>
 
 					<!-- Slider -->
-					<div class="swiper mx-0 mb-md-n8 mb-xxl-n16" data-swiper-options='{
+					<div class="js-swiper swiper mx-0 mb-md-n8 mb-xxl-n16" data-swiper-options='{
                 "spaceBetween": 24,
                 "speed": 800,
                 "autoplay": {

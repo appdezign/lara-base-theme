@@ -14,7 +14,7 @@
 		</button>
 
 		<!-- Swiper slider -->
-		<div class="swiper swiper-nav-onhover mx-n8" data-swiper-options='{
+		<div class="js-swiper swiper swiper-nav-onhover mx-n8" data-swiper-options='{
               "slidesPerView": 1,
               "loop": true,
               "spaceBetween": 8,

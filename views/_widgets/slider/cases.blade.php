@@ -31,7 +31,7 @@
 					<!-- Card -->
 					<div class="card bg-white shadow-sm p-16">
 						<div class="card-body">
-							<div class="swiper" data-swiper-options='{
+							<div class="js-swiper swiper" data-swiper-options='{
                       "spaceBetween": 30,
                       "loop": true,
                       "tabs": true,

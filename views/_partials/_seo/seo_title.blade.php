@@ -9,4 +9,4 @@ $laracomposer = json_decode($laracomposer,true);
 	<title>{{ $data->seo->seo_title }}</title>
 @endif
 
-<!-- Powered by Lara CMS version [TODO LARA8] -->
+<!-- Powered by Lara CMS version [{{ $laracomposer['version'] }}] -->

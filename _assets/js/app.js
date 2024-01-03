@@ -238,7 +238,7 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 	};
 
 	// Carousel initialisation
-	let carousels = document.querySelectorAll('.swiper');
+	let carousels = document.querySelectorAll('.js-swiper');
 	forEach(carousels, (index, value) => {
 
 		let userOptions,

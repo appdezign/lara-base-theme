@@ -2,7 +2,7 @@
 	<h2 class="h1 mb-24">We Have Social Networks</h2>
 	<p class="fs-lg text-muted pb-8 mb-48">Follow us and keep up to date with the freshest news!</p>
 	<div class="swiper-aos" data-aos="fade-up">
-		<div class="swiper" data-swiper-options='{
+		<div class="js-swiper swiper" data-swiper-options='{
           "slidesPerView": 2,
           "pagination": {
             "el": ".swiper-pagination",

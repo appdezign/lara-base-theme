@@ -16,7 +16,7 @@
 		<div class="container text-center py-xl-48">
 			<div class="row justify-content-center pt-lg-48">
 				<div class="col-xl-8 col-lg-9 col-md-10 col-11">
-					<div class="swiper pt-48 pb-24 py-md-48" data-swiper-options='{
+					<div class="js-swiper swiper pt-48 pb-24 py-md-48" data-swiper-options='{
                   "effect": "fade",
                   "speed": 500,
                   "autoplay": {

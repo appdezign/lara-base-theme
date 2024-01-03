@@ -88,6 +88,6 @@
 {{ html()->hidden('_ipaddress', Request::ip()) }}
 
 <button id="{{ $entity->getEntityKey() }}-submit-button" type="submit"
-        class="btn btn-lg btn-primary pull-right">{{ _lanq('lara-front::'.$entity->getEntityKey().'.button.submit') }}</button>
+        class="btn btn-lg btn-primary pull-right">{{ _lanq('lara-eve::'.$entity->getEntityKey().'.button.submit') }}</button>
 
 {{ html()->form()->close() }}

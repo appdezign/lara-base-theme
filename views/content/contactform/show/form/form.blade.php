@@ -22,7 +22,7 @@
 	@if($cvar->fieldstate == 'enabled')
 
 		<div class="col-12 mt-24">
-			{{ html()->label(_lanq('lara-front::'.$entity->getEntityKey().'.formfield.' .$cvar->fieldname) .':', $cvar->fieldname)->class('form-label fs-base') }}
+			{{ html()->label(_lanq('lara-eve::'.$entity->getEntityKey().'.formfield.' .$cvar->fieldname) .':', $cvar->fieldname)->class('form-label fs-base') }}
 
 			@if($cvar->fieldtype == 'string')
 				{{ html()->text($cvar->fieldname, null)
@@ -177,7 +177,7 @@
 	<button id="{{ $entity->getEntityKey() }}-submit-button"
 	        type="submit"
 	        class="btn btn-lg btn-info float-end">
-		{{ _lanq('lara-front::'.$entity->getEntityKey().'.button.submit') }}
+		{{ _lanq('lara-eve::'.$entity->getEntityKey().'.button.submit') }}
 	</button>
 </div>
 

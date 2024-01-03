@@ -1,6 +1,6 @@
 @if($widgetObjects->isNotEmpty())
 
-	<div class="swiper mx-n8" data-swiper-options='{
+	<div class="js-swiper swiper mx-n8" data-swiper-options='{
           "slidesPerView": 2,
           "speed": 800,
           "autoplay": {
