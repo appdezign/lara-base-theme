@@ -23,7 +23,7 @@
 	@if($cvar->fieldstate == 'enabled')
 
 		<div class="col-12 mt-24">
-			{{ html()->label(_lanq('lara-eve::'.$entity->getEntityKey().'.formfield.' .$cvar->fieldname) .':', $cvar->fieldname)->class('form-label fs-base') }}
+			{{ html()->label(_lanq('lara-eve::'.$entity->getEntityKey().'.column.' .$cvar->fieldname) .':', $cvar->fieldname)->class('form-label fs-base') }}
 
 			@if($cvar->fieldtype == 'string')
 				{{ html()->text($cvar->fieldname, null)

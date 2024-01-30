@@ -36,7 +36,7 @@
 											<div class="payoff-content">
 												<h2 class="from-start mb-lg-24">{{ $widgetslider->title }}</h2>
 												<div class="from-end">
-													<div class="fs-20 pb-8 mb-lg-24">
+													<div class="pb-8 mb-lg-24">
 														{!! $widgetslider->payoff  !!}
 													</div>
 												</div>
@@ -61,11 +61,19 @@
 
 						<div class="swiper-slide swiper-slide-hero h-100"
 						     style="background-image:url({{ _cimg($widgetslider->featured->filename, 1920, 960) }})">
+
 							<div class="hero-caption-bg hero-caption-bg-{{ $widgetslider->captiontype }}">
-								<div class="text-start color-white">
-									{{ $widgetslider->caption }}
+								<div class="hero-caption-bottom color-white">
+									<div class="container">
+										<div class="row">
+											<div class="col-12 text-center">
+												{{ $widgetslider->caption }}
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
+
 						</div>
 
 					@else

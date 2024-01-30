@@ -36,7 +36,9 @@
 			<ul class="children">
 				@if(!empty($node->children))
 					@foreach ($node->children as $node)
-						@include('content._partials.sort_by_tag_list_render', $node)
+						@if($node->publish == 1)
+							@include('content._partials.sort_by_tag_list_render', $node)
+						@endif
 					@endforeach
 				@endif
 			</ul>

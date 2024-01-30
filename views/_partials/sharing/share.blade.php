@@ -1,5 +1,5 @@
 
-@if(($entity->getEntityKey() == 'page' && $data->page->ishome == 0) || ($entity->getEgroup() == 'entity' && $entity->getMethod() == 'show'))
+@if(($entity->getEntityKey() == 'page' && isset($data->page) && $data->page->ishome == 0) || ($entity->getEgroup() == 'entity' && $entity->getMethod() == 'show'))
 
 
 <section class="lara-sharing py-48">
