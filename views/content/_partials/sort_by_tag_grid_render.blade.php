@@ -33,7 +33,9 @@
 	@if (!$node->isLeaf())
 		@if(!empty($node->children))
 			@foreach ($node->children as $node)
-				@include('content._partials.sort_by_tag_grid_render', $node)
+				@if($node->publish == 1)
+					@include('content._partials.sort_by_tag_grid_render', $node)
+				@endif
 			@endforeach
 		@endif
 	@endif
