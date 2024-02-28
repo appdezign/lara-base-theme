@@ -1,4 +1,4 @@
-@if($widgetsliders->isNotEmpty())
+@if(!empty($widgetsliders))
 
 	<div class="position-relative py-lg-24 py-xl-48">
 
