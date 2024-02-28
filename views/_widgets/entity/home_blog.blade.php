@@ -1,4 +1,4 @@
-@if($widgetObjects->isNotEmpty())
+@if(!empty($widgetObjects))
 
 	<h2 class="h1 text-center pb-8">News &amp; Insights</h2>
 	<div class="position-relative mx-md-8 px-md-48">

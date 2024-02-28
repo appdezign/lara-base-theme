@@ -1,4 +1,4 @@
-@if($widgetObjects->isNotEmpty())
+@if(!empty($widgetObjects))
 
 	<h2 class="h1 mb-md-48 mb-24 pb-xl-16 pb-lg-8 pb-md-0 pb-sm-8">What Our Clients Say About Us</h2>
 

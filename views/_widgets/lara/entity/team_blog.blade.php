@@ -1,4 +1,4 @@
-@if($widgetObjects->isNotEmpty())
+@if(!empty($widgetObjects))
 
 	<section class="py-48">
 		<div class="container py-md-16 py-lg-48">

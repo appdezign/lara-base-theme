@@ -1,4 +1,4 @@
-@if($widgetsliders->isNotEmpty())
+@if(!empty($widgetsliders))
 
 	<section class="dark-mode bg-dark">
 		<div class="js-swiper swiper swiper-nav-onhover"

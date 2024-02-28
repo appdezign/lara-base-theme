@@ -1,4 +1,4 @@
-@if($widgetObjects->isNotEmpty())
+@if(!empty($widgetObjects))
 
 	<section class="container" data-aos="fade-up">
 		<div class="row">

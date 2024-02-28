@@ -1,4 +1,4 @@
-@if($widgetObjects->isNotEmpty())
+@if(!empty($widgetObjects))
 
 	<section class="container py-48 my-md-16 my-lg-48">
 		<h2 class="h1 text-center pt-4 pb-16 mb-16 mb-lg-24">{{ $larawidget->title }}</h2>
