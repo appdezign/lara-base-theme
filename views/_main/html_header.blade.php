@@ -6,6 +6,8 @@
 
 {!! Theme::js('vendor/hinclude/hinclude.js') !!}
 
+@include('_partials._seo.language_versions')
+
 @include('_partials._seo.seo_meta_tags')
 
 @include('_partials._seo.og_meta_tags')
