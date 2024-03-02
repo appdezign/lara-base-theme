@@ -16,7 +16,9 @@
 					</div>
 					<div class="col-lg-5 col-md-6 offset-lg-1 d-flex">
 						<div class="align-self-center ps-lg-0 ps-md-24">
-							<h2 class="h1 mb-lg-24 mb-16">{{ $data->object->title }}</h2>
+
+							{!! _header('title', $data->object->title, 'h1 mb-lg-24 mb-16', $data->htag->titleTag, $data->htag->id) !!}
+
 							<p class="mb-24 pb-lg-16 fs-lg">{!! $data->object->body !!}</p>
 							<a href="{{ route($data->eroutes['page']['about']) }}"
 							   class="btn btn-lg btn-outline-primary">More about us</a>
@@ -25,7 +27,9 @@
 				@else
 					<div class="col-12 d-flex">
 						<div class="align-self-center ps-lg-0 ps-md-24">
-							<h2 class="h1 mb-lg-24 mb-16">{{ $data->object->title }}</h2>
+
+							{!! _header('title', $data->object->title, 'h1 mb-lg-24 mb-16', $data->htag->titleTag, $data->htag->id) !!}
+
 							<p class="mb-24 pb-lg-16 fs-lg">{!! $data->object->body !!}</p>
 							<a href="{{ route($data->eroutes['page']['about']) }}"
 							   class="btn btn-lg btn-outline-primary">More about us</a>
@@ -38,7 +42,8 @@
 
 	<!-- Solutions -->
 	<section class="container mb-48 pb-lg-48 pb-md-24 pb-16">
-		<h2 class="h1 mb-lg-48 mb-24 pb-lg-0 pb-md-8 text-center">Сustom Software Solutions</h2>
+
+		{!! _header('subtitle', 'Сustom Software Solutions', 'h1 mb-lg-48 mb-24 pb-lg-0 pb-md-8 text-center', $data->htag->subtitleTag, $data->htag->id) !!}
 
 		<div class="swiper-aos" data-aos="fade-up">
 			<div class="js-swiper swiper mb-xl-16" data-swiper-options='{

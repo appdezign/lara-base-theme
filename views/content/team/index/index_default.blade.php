@@ -24,7 +24,7 @@ $teamHeight = 960 * $ratioY / $ratioX;
 				<div class="row mb-48">
 					<div class="{{ $grd->gridColumns }}">
 						<div class="page-title mb-48">
-							<h1 class="mb-2 mb-md-0">{{ $data->page->title }}</h1>
+							{!! _header('title', $data->page->title, 'mb-2 mb-md-0', $data->htag->titleTag, $data->htag->id) !!}
 						</div>
 
 						@if($data->page->hasFeatured() && !$data->page->heroIsFeatured())

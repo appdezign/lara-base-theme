@@ -53,7 +53,9 @@
 									@foreach($widgetsliders as $widgetslider)
 										<div class="swiper-slide" data-swiper-tab="#image-{{ $widgetslider->id }}">
 											{!! Theme::img('images/case-study-logo-'. $loop->iteration . '.png', 'Logo', 'd-block mb-16', ['width' => '72']) !!}
-											<h3 class="mb-8">{{ $widgetslider->title }}</h3>
+
+											{!! _header('list', $widgetslider->title, 'mb-8', $headerTag->listTag, $headerTag->id) !!}
+
 											<p class="fs-14 text-muted border-bottom pb-16 mb-16">{{ $widgetslider->subtitle }}</p>
 											<p class="pb-8 pb-lg-16 mb-16">{!! $widgetslider->payoff  !!}</p>
 											<a href="#" class="btn btn-primary">View case study</a>

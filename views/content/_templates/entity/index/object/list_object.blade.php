@@ -19,11 +19,9 @@
 
 			<div class="col-md-8">
 				<div class="card-body">
-					<h3 class="h4">
-						<a href="{{ route($entity->getActiveRoute() . '.show', $obj->routeVars) }}">
-							{{ $obj->title }}
-						</a>
-					</h3>
+
+					{!! _header('list', $obj->title, 'h4', $data->htag->listTag, $data->htag->id, route($entity->getActiveRoute() . '.show', $obj->routeVars)) !!}
+
 					<p>{!! $obj->lead !!}</p>
 
 				</div>
@@ -42,11 +40,9 @@
 							   class="badge fs-14 text-nav bg-secondary text-decoration-none">{{ $tag->title }}</a>
 						@endforeach
 					</div>
-					<h3 class="h4">
-						<a href="{{ route($entity->getActiveRoute() . '.show', $obj->routeVars) }}">
-							{{ $obj->title }}
-						</a>
-					</h3>
+
+					{!! _header('list', $obj->title, 'h4', $data->htag->listTag, $data->htag->id, route($entity->getActiveRoute() . '.show', $obj->routeVars)) !!}
+
 					<p>{!! $obj->lead !!}</p>
 
 				</div>

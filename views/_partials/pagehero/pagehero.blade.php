@@ -8,7 +8,7 @@
 		     style="background-image: url({{ _cimg($data->page->hero->filename, 1920, 960) }});"></div>
 		<div class="position-relative text-center zindex-5 overflow-hidden page-hero-{{ $data->page->hero->herosize }}">
 			@if($data->page->hero->caption)
-				<h3 class="text-white">{!! strip_tags($data->page->hero->caption)  !!}</h3>
+				{!! _header('subtitle', strip_tags($data->page->hero->caption), 'h3 text-white', $data->htag->subtitleTag, $data->htag->id) !!}
 			@else
 				&nbsp;
 			@endif

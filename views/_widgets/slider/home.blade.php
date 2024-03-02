@@ -34,7 +34,9 @@
 									<div class="payoff payoff-{{ $widgetslider->textposition }} payoff-{{ $widgetslider->overlaysize }}">
 										<div class="payoff-inner bg-{{ $widgetslider->overlaycolor }}-alfa-{{ $widgetslider->overlaytransp }}">
 											<div class="payoff-content">
-												<h2 class="from-start mb-lg-24">{{ $widgetslider->title }}</h2>
+
+												{!! _header('list', $widgetslider->title , 'h2 from-start mb-lg-24', $headerTag->listTag, $headerTag->id) !!}
+
 												<div class="from-end">
 													<div class="pb-8 mb-lg-24">
 														{!! $widgetslider->payoff  !!}

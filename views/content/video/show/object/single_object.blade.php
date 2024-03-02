@@ -5,7 +5,7 @@
 		<i class="far fa-lg fa-angle-left"></i>
 	</a>
 
-	<h1 class="pb-16">{{ $data->object->title }}</h1>
+	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 	{{-- YOUTUBE VIDEO --}}
 	@if($data->object->hasVideos())

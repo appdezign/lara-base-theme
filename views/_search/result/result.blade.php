@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col-lg-8 offset-lg-2">
 						<div class="page-title mb-48">
-							<h1 class="mb-2 mb-md-0">Zoekresultaten</h1>
+							{!! _header('title', 'Zoekresultaten', 'mb-2 mb-md-0', $data->htag->titleTag, $data->htag->id) !!}
 						</div>
 					</div>
 				</div>
@@ -59,9 +59,7 @@
 
 								<div class="row">
 									<div class="col-sm-9 offset-sm-3">
-										<h2 class="mb-24 mt-48">
-											{{ ucfirst(_lanq('lara-' . $ent->entity->getModule() . '::' . $entity_key . '.entity.entity_title')) }}
-										</h2>
+										{!! _header('subtitle', ucfirst(_lanq('lara-' . $ent->entity->getModule() . '::' . $entity_key . '.entity.entity_title')), 'mb-24 mt-48', $data->htag->subtitleTag, $data->htag->id) !!}
 									</div>
 								</div>
 
@@ -80,9 +78,8 @@
 										</div>
 										<div class="col-sm-9">
 
-											<h4>
-												<a href="{{ $result->url  }}">{{ $result->title }}</a>
-											</h4>
+											{!! _header('list', $result->title, 'h4', $data->htag->listTag, $data->htag->id, $result->url) !!}
+
 											@if(isset($result->body) && !empty($result->body))
 												<p>{!! substr(strip_tags($result->body),0,150) !!} ...</p>
 											@elseif(isset($result->lead) && !empty($result->lead))

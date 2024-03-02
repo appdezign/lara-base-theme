@@ -1,12 +1,14 @@
 @if(!empty($widgetObjects))
 
-	<h2 class="h1 mb-md-48 mb-24 py-xl-16 pb-lg-8 pb-md-0 pb-sm-8 text-center">Our Services</h2>
+	{!! _header('title', 'Our Services', 'h1 mb-md-48 mb-24 py-xl-16 pb-lg-8 pb-md-0 pb-sm-8 text-center', $headerTag->titleTag, $headerTag->id) !!}
 
 	@foreach($widgetObjects as $widgetObject)
 		<div class="row gy-4 mb-48 pb-xl-48 pb-md-24 pb-16">
 			<div class="col-lg-5 col-md-6 order-md-1 order-2 d-flex">
 				<div class="align-self-center pe-lg-0 pe-md-24">
-					<h3 class="mb-md-24">{{ $widgetObject->title }}</h3>
+
+					{!! _header('list', $widgetObject->title, 'mb-md-24', $headerTag->listTag, $headerTag->id) !!}
+
 					<p class="mb-md-24 mb-16 fs-lg">{!! $widgetObject->lead !!}</p>
 					<hr class="my-md-24 my-16">
 

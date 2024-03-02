@@ -10,11 +10,7 @@
 		   aria-label="Read more"></a>
 	</div>
 	<div class="card-body text-center pb-24">
-		<h3 class="fs-18 fw-semibold pt-4 mb-8">
-			<a href="{{ route($entity->getActiveRoute() . '.show', $obj->routeVars) }}">
-				{{ $obj->title }}
-			</a>
-		</h3>
+		{!! _header('list', $obj->title, 'fs-18 fw-semibold pt-4 mb-8', $data->htag->listTag, $data->htag->id, route($entity->getActiveRoute() . '.show', $obj->routeVars)) !!}
 	</div>
 
 </article>

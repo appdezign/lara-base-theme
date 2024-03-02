@@ -21,8 +21,7 @@
 		@foreach($data->tags as $taxonomy => $tags)
 
 			<div @if($tags[0]->isLeaf()) class="hidden" @endif>
-				<h3>{{ ucfirst(_lanq('lara-front::taxonomy.plural.' . $taxonomy)) }}</h3>
-
+				{!! _header('list', ucfirst(_lanq('lara-front::taxonomy.plural.' . $taxonomy)), null, $data->htag->listTag, $data->htag->id) !!}
 				<ul class="tagmenu {{ $taxonomy }} mb-48">
 					@foreach($tags as $node)
 						@include('content._partials.tag_menu_render', $node)

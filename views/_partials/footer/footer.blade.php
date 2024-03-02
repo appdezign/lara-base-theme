@@ -14,10 +14,10 @@
 						@include('larawidget', ['hook' => 'footer2'])
 					</div>
 					<div class="col-xl-4 col-lg-3">
-						@include('_partials.footer.footer_socials')
+						@include('larawidget', ['hook' => 'footer3'])
 					</div>
 					<div class="col-xl-4 col-lg-5 pt-8 pt-lg-0">
-						@include('_partials.footer.footer_contact')
+						@include('larawidget', ['hook' => 'footer4'])
 					</div>
 				</div>
 			</div>

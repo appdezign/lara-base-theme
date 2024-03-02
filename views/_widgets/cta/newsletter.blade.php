@@ -5,14 +5,14 @@
 		<div class="container py-md-16 py-lg-48">
 			<div class="row justify-content-center">
 				<div class="col-xl-8 col-lg-9 col-md-11">
-					<h2 class="h1 d-md-inline-block position-relative mb-md-48 mb-sm-24 text-sm-start text-center">
-						{{ $widgetcta->title }}
-					</h2>
+
+					{!! _header('title', $widgetcta->title, 'h1 d-md-inline-block position-relative mb-md-48 mb-sm-24 text-sm-start text-center', $headerTag->titleTag, $headerTag->id) !!}
 
 					<!-- Title + checkboxes -->
 					<div class="row gy-4 align-items-center mb-lg-48 mb-24 pb-16">
 						<div class="col-md-3">
-							<h3 class="h5 mb-0 text-sm-start text-center">{{ $widgetcta->body }}</h3>
+
+							{!! _header('list', $widgetcta->body, 'h5 mb-0 text-sm-start text-center', $headerTag->listTag, $headerTag->id) !!}
 						</div>
 						<div class="col-md-9">
 							<div class="row row-cols-sm-16 row-cols-2 gy-2">

@@ -1,5 +1,7 @@
 <section class="container text-center py-48 my-8 my-md-24 my-lg-48">
-	<h2 class="h1 mb-24">We Have Social Networks</h2>
+
+	{!! _header('title', 'We Have Social Networks', 'h1 mb-24', $headerTag->titleTag, $headerTag->id) !!}
+
 	<p class="fs-lg text-muted pb-8 mb-48">Follow us and keep up to date with the freshest news!</p>
 	<div class="swiper-aos" data-aos="fade-up">
 		<div class="js-swiper swiper" data-swiper-options='{
@@ -29,7 +31,7 @@
 							<i class="fab fa-facebook-f fs-15"></i>
 						</a>
 						<div class="pt-24">
-							<h6 class="mb-4">Facebook</h6>
+							{!! _header('list', 'Facebook', 'h6 mb-4', $headerTag->listTag, $headerTag->id) !!}
 							<p class="fs-14 text-muted mb-0">laracms</p>
 						</div>
 					</div>
@@ -42,7 +44,7 @@
 							<i class="fab fa-instagram fs-15"></i>
 						</a>
 						<div class="pt-24">
-							<h6 class="mb-4">Instagram</h6>
+							{!! _header('list', 'Instagram', 'h6 mb-4', $headerTag->listTag, $headerTag->id) !!}
 							<p class="fs-14 text-muted mb-0">@laracms</p>
 						</div>
 					</div>
@@ -55,7 +57,7 @@
 							<i class="fab fa-twitter fs-15"></i>
 						</a>
 						<div class="pt-24">
-							<h6 class="mb-4">Twitter</h6>
+							{!! _header('list', 'Twitter', 'h6 mb-4', $headerTag->listTag, $headerTag->id) !!}
 							<p class="fs-14 text-muted mb-0">@laracms</p>
 						</div>
 					</div>
@@ -68,7 +70,7 @@
 							<i class="fab fa-linkedin-in fs-15"></i>
 						</a>
 						<div class="pt-24">
-							<h6 class="mb-4">LinkedIn</h6>
+							{!! _header('list', 'LinkedIn', 'h6 mb-4', $headerTag->listTag, $headerTag->id) !!}
 							<p class="fs-14 text-muted mb-0">LaraCms Inc.</p>
 						</div>
 					</div>
@@ -81,7 +83,7 @@
 							<i class="fab fa-youtube fs-15"></i>
 						</a>
 						<div class="pt-24">
-							<h6 class="mb-4">YouTube</h6>
+							{!! _header('list', 'YouTube', 'h6 mb-4', $headerTag->listTag, $headerTag->id) !!}
 							<p class="fs-14 text-muted mb-0">LaraCms</p>
 						</div>
 					</div>
