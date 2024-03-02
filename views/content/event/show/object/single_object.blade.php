@@ -5,7 +5,7 @@
 		<i class="far fa-lg fa-angle-left"></i>
 	</a>
 
-	<h1 class="pb-16">{{ $data->object->title }}</h1>
+	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 	<div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-16">
 		<div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-24">
@@ -178,8 +178,7 @@
 @if(is_numeric($data->object->location->latitude) && is_numeric($data->object->location->longitude))
 	@if($data->object->location->latitude != 0 && $data->object->location->longitude != 0)
 
-		<h2>Kaart</h2>
-
+		{!! _header('subtitle', 'Kaart', null, $data->htag->subtitleTag, $data->htag->id) !!}
 
 		<div class="maps-container">
 			<div id="map-canvas" class="bg-secondary" style="height: 500px;"></div>

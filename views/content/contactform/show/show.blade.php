@@ -9,7 +9,7 @@
 			<!-- Contact links -->
 			<div class="col-xl-4 col-lg-5 pb-24 pb-sm-48 mb-8 mb-sm-0">
 				<div class="pe-lg-24 pe-xl-0">
-					<h1 class="pb-16 pb-md-24 mb-lg-48">{{ $data->page->title }}</h1>
+					{!! _header('title', $data->page->title, 'pb-16 pb-md-24 mb-lg-48', $data->htag->titleTag, $data->htag->id) !!}
 					{!! $data->page->body !!}
 				</div>
 			</div>
@@ -19,7 +19,8 @@
 				<div class="card border-light shadow-lg py-16 p-sm-24 p-md-36">
 					<div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
 					<div class="card-body position-relative zindex-2">
-						<h2 class="card-title mb-16">Get in touch</h2>
+
+						{!! _header('subtitle', 'Get in touch', 'card-title mb-16', $data->htag->subtitleTag, $data->htag->id) !!}
 
 						@include('content.' . $entity->getEntityKey() . '.show.form.form')
 

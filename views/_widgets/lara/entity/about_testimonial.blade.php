@@ -6,7 +6,9 @@
 				<div class="card h-100 border-0 overflow-hidden px-md-24">
 					<span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
 					<div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-8 p-lg-24">
-						<h2 class="h1 text-center text-md-start p-lg-24">{{ $larawidget->title }}</h2>
+
+						{!! _header('title', $larawidget->title, 'h1 text-center text-md-start p-lg-24', $headerTag->titleTag, $headerTag->id) !!}
+
 					</div>
 				</div>
 			</div>
@@ -62,9 +64,9 @@
 											     alt="{{ $widgetObject->featured->image_alt }}"
 											     class="lazyload rounded-circle"/>
 											<div class="ps-16">
-												<h6 class="fw-semibold lh-base mb-0">
-													{{ $widgetObject->title }}
-												</h6>
+
+												{!! _header('list', $widgetObject->title, 'h6 fw-semibold lh-base mb-0', $headerTag->titleTag, $headerTag->id) !!}
+
 												<span class="fs-14 text-muted">
 													{{ $widgetObject->role }}
 												</span>

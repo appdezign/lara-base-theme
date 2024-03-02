@@ -13,9 +13,8 @@
 
 				<div class="row">
 					<div class="{{ $grd->gridColumns }}">
-						<h1 class="lara-object-title">
-							{{ $data->object->title }}
-						</h1>
+
+						{!! _header('title', $data->object->title, 'lara-object-title', $data->htag->titleTag, $data->htag->id) !!}
 
 						{{-- BODY TEXT --}}
 						{!! $data->object->body !!}

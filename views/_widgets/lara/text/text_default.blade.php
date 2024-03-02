@@ -2,8 +2,11 @@
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
 			<div class="module-header text-center">
-				<h2 class="montserrat text-uppercase" >{{ $larawidget->title }}</h2>
+
+				{!! _header('title', $larawidget->title, 'montserrat text-uppercase', $headerTag->titleTag, $headerTag->id) !!}
+
 				<p class="lead divider-line">{!! $larawidget->body !!}</p>
+
 			</div>
 		</div>
 	</div>

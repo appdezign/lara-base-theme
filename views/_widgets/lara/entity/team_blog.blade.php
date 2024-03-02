@@ -2,7 +2,9 @@
 
 	<section class="py-48">
 		<div class="container py-md-16 py-lg-48">
-			<h2 class="h1 text-center pb-8">{{ $larawidget->title }}</h2>
+
+			{!! _header('title', $larawidget->title, 'h1 text-center pb-8', $headerTag->titleTag, $headerTag->id) !!}
+
 			<div class="position-relative mx-md-8 px-md-48">
 
 				<!-- Slider controls (Prev / next) -->
@@ -17,34 +19,34 @@
 
 				<!-- Swiper slider -->
 				<div class="js-swiper swiper swiper-nav-onhover mx-n8" data-swiper-options='{
-              "slidesPerView": 1,
-              "loop": true,
-              "spaceBetween": 8,
-              "speed": 800,
-              "autoplay": {
-                "delay": 4000,
-                "disableOnInteraction": false
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "clickable": true
-              },
-              "navigation": {
-                "prevEl": "#news-prev",
-                "nextEl": "#news-next"
-              },
-              "breakpoints": {
-                "0": {
-                  "slidesPerView": 1
-                },
-                "560": {
-                  "slidesPerView": 2
-                },
-                "992": {
-                  "slidesPerView": 3
-                }
-              }
-            }'>
+		              "slidesPerView": 1,
+		              "loop": true,
+		              "spaceBetween": 8,
+		              "speed": 800,
+		              "autoplay": {
+		                "delay": 4000,
+		                "disableOnInteraction": false
+		              },
+		              "pagination": {
+		                "el": ".swiper-pagination",
+		                "clickable": true
+		              },
+		              "navigation": {
+		                "prevEl": "#news-prev",
+		                "nextEl": "#news-next"
+		              },
+		              "breakpoints": {
+		                "0": {
+		                  "slidesPerView": 1
+		                },
+		                "560": {
+		                  "slidesPerView": 2
+		                },
+		                "992": {
+		                  "slidesPerView": 3
+		                }
+		              }
+		            }'>
 					<div class="swiper-wrapper">
 
 						@foreach($widgetObjects as $widgetObject)
@@ -60,15 +62,11 @@
 												@endforeach
 											</a>
 											<span class="fs-14 text-muted">
-									{{ Carbon\Carbon::parse($widgetObject->publish_from)->format('F d, Y') }}
-								</span>
+												{{ Carbon\Carbon::parse($widgetObject->publish_from)->format('F d, Y') }}
+											</span>
 										</div>
-										<h3 class="h4">
-											<a href="{{ route($widgetEntityRoute . '.show', $widgetObject->slug) }}"
-											   class="stretched-link">
-												{{ $widgetObject->title }}
-											</a>
-										</h3>
+
+										{!! _header('list', $widgetObject->title, 'h4', $headerTag->listTag, $headerTag->id, route($widgetEntityRoute . '.show', $widgetObject->slug), 'stretched-link') !!}
 
 										@if($widgetObject->hasFeatured())
 											<div class="blog-featured-image mb-20">

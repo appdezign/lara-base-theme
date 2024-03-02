@@ -14,7 +14,7 @@
 				<div class="row">
 					<div class="{{ $grd->gridColumns }}">
 
-						<h1>{{ $data->page->title }}</h1>
+						{!! _header('title', $data->page->title, null, $data->htag->titleTag, $data->htag->id) !!}
 
 						@include('content.' . $entity->getEntityKey() . '.show.form.form')
 

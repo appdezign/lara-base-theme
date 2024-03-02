@@ -20,7 +20,8 @@
 
 		<div class="col-md-7">
 			<div class="card-body">
-				<h1 class="mb-12">{{ $data->object->firstname }} {{ $data->object->middlename }} {{ $data->object->title }}</h1>
+
+				{!! _header('title', $data->object->firstname.' '.$data->object->middlename.' '.$data->object->title, 'mb-12', $data->htag->titleTag, $data->htag->id) !!}
 
 				<div class="py-12">
 					<strong>{!! $data->object->role !!}</strong>
@@ -62,7 +63,7 @@
 </div>
 
 @if($data->object->hasVideos())
-	<h3>{{ $data->object->video->title }}</h3>
+	{!! _header('subtitle', $data->object->video->title, null, $data->htag->subtitleTag, $data->htag->id) !!}
 	<div class="ratio ratio-16x9 mt-48 mb-48">
 		<iframe width="560" height="315"
 		        src="https://www.youtube.com/embed/{{ $data->object->video->youtubecode }}?rel=0"

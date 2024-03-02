@@ -1,6 +1,6 @@
 @if(!empty($widgetObjects))
 
-	<h2 class="h1 mb-md-48 mb-24 pb-xl-16 pb-lg-8 pb-md-0 pb-sm-8">What Our Clients Say About Us</h2>
+	{!! _header('title', 'What Our Clients Say About Us', 'h1 mb-md-48 mb-24 pb-xl-16 pb-lg-8 pb-md-0 pb-sm-8', $headerTag->titleTag, $headerTag->id) !!}
 
 	<!-- Tabs -->
 	<div class="row gy-4 gx-md-4 gx-3" data-aos="fade-up">
@@ -35,7 +35,9 @@
 				@foreach($widgetObjects as $widgetObject)
 					<div class="tab-pane fade @if($loop->index == 0) show active @endif"
 					     id="testimonial-{{ $widgetObject->id }}" role="tabpanel">
-						<h4 class="mb-16" style="max-width: 22.875rem;">“{{ $widgetObject->quoteshort }}”</h4>
+
+						{!! _header('list', $widgetObject->quoteshort, 'mb-16', $headerTag->listTag, $headerTag->id, null, null, 'max-width: 22.875rem;') !!}
+
 						<div class="fs-14 text-nowrap">
 							@for($i = 1; $i <= $widgetObject->stars; $i++)
 								<i class="fas fa-star text-warning"></i>

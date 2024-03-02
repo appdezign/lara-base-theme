@@ -18,7 +18,7 @@
 					<div class="{{ $grd->gridColumns }}">
 						<div class="d-flex justify-content-between mb-48">
 							<div class="page-title">
-								<h1 class="mb-2 mb-md-0">{{ $data->page->title }}</h1>
+								{!! _header('title', $data->page->title, 'mb-2 mb-md-0', $data->htag->titleTag, $data->htag->id) !!}
 							</div>
 						</div>
 					</div>

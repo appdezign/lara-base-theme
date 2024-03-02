@@ -1,6 +1,7 @@
 @if(!empty($widgetObjects))
 
-	<h2 class="h1 text-center pb-8">News &amp; Insights</h2>
+	{!! _header('title', 'News &amp; Insights', 'h1 text-center pb-8', $headerTag->titleTag, $headerTag->id) !!}
+
 	<div class="position-relative mx-md-8 px-md-48">
 
 		<!-- Slider controls (Prev / next) -->
@@ -61,12 +62,8 @@
 									{{ Carbon\Carbon::parse($widgetObject->publish_from)->format('F d, Y') }}
 								</span>
 								</div>
-								<h3 class="h4">
-									<a href="{{ route($widgetEntityRoute . '.show', $widgetObject->slug) }}"
-									   class="stretched-link">
-										{{ $widgetObject->title }}
-									</a>
-								</h3>
+
+								{!! _header('list', $widgetObject->title, 'h4', $headerTag->listTag, $headerTag->id, route($widgetEntityRoute . '.show', $widgetObject->slug), 'stretched-link') !!}
 
 								@if($widgetObject->hasFeatured())
 									<div class="blog-featured-image mb-20">

@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col-lg-8 offset-lg-2">
 						<div class="page-title mb-48">
-							<h1 class="mb-2 mb-md-0">Zoeken</h1>
+							{!! _header('title', 'Zoeken', 'mb-2 mb-md-0', $data->htag->titleTag, $data->htag->id) !!}
 						</div>
 					</div>
 				</div>

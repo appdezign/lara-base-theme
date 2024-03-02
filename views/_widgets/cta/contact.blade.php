@@ -10,10 +10,12 @@
 				<div class="row align-items-center pt-4 pb-8 py-lg-24">
 					<div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 mb-24 pb-16 mb-md-0 pb-md-0">
 
-						<h2 class="h1 mb-lg-24">{{ $widgetcta->title }}</h2>
+						{!! _header('title', $widgetcta->title, 'h1 mb-lg-24', $headerTag->titleTag, $headerTag->id) !!}
+
 						<p class="pb-8 pb-md-24 pb-lg-48">{{ $widgetcta->body }}</p>
 
-						<h3 class="mb-lg-24">Contact Info</h3>
+						{!! _header('list', 'Contact Info', 'mb-lg-24', $headerTag->listTag, $headerTag->id) !!}
+
 						<ul class="list-unstyled pb-16 pb-md-24 pb-lg-48 mb-8">
 							<li class="mb-8">
 								<div class="row">

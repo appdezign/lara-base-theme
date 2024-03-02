@@ -1,7 +1,9 @@
 @if(!empty($widgetObjects))
 
 	<section class="container py-48 my-md-16 my-lg-48">
-		<h2 class="h1 text-center pt-4 pb-16 mb-16 mb-lg-24">{{ $larawidget->title }}</h2>
+
+		{!! _header('title', $larawidget->title, 'h1 text-center pt-4 pb-16 mb-16 mb-lg-24', $headerTag->titleTag, $headerTag->id) !!}
+
 		{!! $larawidget->body !!}
 
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-24">
@@ -48,8 +50,11 @@
 						</div>
 
 						<div class="card-body text-center p-16">
-							<h3 class="fs-18 fw-semibold pt-4 mb-8">{{ $widgetObject->firstname }} {{ $widgetObject->middlename }} {{ $widgetObject->title }}</h3>
+
+							{!! _header('list', $widgetObject->firstname.' '.$widgetObject->middlename.' '.$widgetObject->title, 'fs-18 fw-semibold pt-4 mb-8', $headerTag->listTag, $headerTag->id) !!}
+
 							<p class="fs-14 mb-0">{{ $widgetObject->role }}</p>
+
 						</div>
 
 					</div>
