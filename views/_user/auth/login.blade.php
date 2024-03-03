@@ -5,8 +5,11 @@
 	<div class="d-flex h-100 justify-content-center align-items-center">
 		<div class="card shadow-sm" style="width: 360px; max-width: 100%;">
 			<div class="card-header d-flex justify-content-start ">
+
 				{!! Theme::img('images/lara-logo-2023.svg', 'Silicon', 'me-15', ['width' => '47']) !!}
-				<h1 class="m-0">{{ ucfirst(_lanq('lara-front::user.headers.login')) }}</h1>
+
+				{!! _header('title', ucfirst(_lanq('lara-front::user.headers.login')), 'm-0', $data->htag->titleTag, $data->htag->id) !!}
+
 			</div>
 			<div class="card-body">
 

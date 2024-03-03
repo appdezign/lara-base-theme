@@ -33,61 +33,92 @@
 @else
 	@csrf
 @endif
+<div class="row">
 
-<x-frontshowrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.username').':', 'username') }}
-	</x-slot>
-	{{ $data->object->username }}
-</x-frontshowrow>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-6 col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.username').':', 'username') }}
+			</div>
+			<div class="col-6 col-md-8">
+				{{ $data->object->username }}
+			</div>
+		</div>
+	</div>
 
-<x-frontshowrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.email').':', 'email') }}
-	</x-slot>
-	{{ $data->object->email }}
-</x-frontshowrow>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-6 col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.email').':', 'email') }}
+			</div>
+			<div class="col-6 col-md-8">
+				{{ $data->object->email }}
+			</div>
+		</div>
+	</div>
 
-<x-frontformrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.firstname').':', 'firstname') }}
-	</x-slot>
-	{{ html()->text('firstname', null)->class('form-control') }}
-</x-frontformrow>
-
-<x-frontformrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.middlename').':', 'middlename') }}
-	</x-slot>
-	{{ html()->text('middlename', null)->class('form-control') }}
-</x-frontformrow>
-
-<x-frontformrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.lastname').':', 'lastname') }}
-	</x-slot>
-	{{ html()->text('lastname', null)->class('form-control') }}
-</x-frontformrow>
-
-<x-frontformrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.name').':', 'name') }}
-	</x-slot>
-	{{ html()->text('name', null)->class('form-control') }}
-</x-frontformrow>
-
-<x-frontformrow>
-	<x-slot name="label">
-		{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.new_password').':', '_password') }}
-	</x-slot>
-	{{ html()->password('_password')->class('form-control')->attributes(['autocomplete' => 'new-password']) }}
-</x-frontformrow>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.firstname').':', 'firstname') }}
+			</div>
+			<div class="col-md-8">
+				{{ html()->text('firstname', null)->class('form-control') }}
+			</div>
+		</div>
+	</div>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.middlename').':', 'middlename') }}
+			</div>
+			<div class="col-md-8">
+				{{ html()->text('middlename', null)->class('form-control') }}
+			</div>
+		</div>
+	</div>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.lastname').':', 'lastname') }}
+			</div>
+			<div class="col-md-8">
+				{{ html()->text('lastname', null)->class('form-control') }}
+			</div>
+		</div>
+	</div>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.name').':', 'name') }}
+			</div>
+			<div class="col-md-8">
+				{{ html()->text('name', null)->class('form-control') }}
+			</div>
+		</div>
+	</div>
+	<div class="col-12 mt-24">
+		<div class="row">
+			<div class="col-md-4">
+				{{ html()->label(_lanq('lara-' . $entity->getModule().'::'.$entity->getEntityKey().'.column.new_password').':', '_password') }}
+			</div>
+			<div class="col-md-8">
+				{{ html()->password('_password')->class('form-control')->attributes(['autocomplete' => 'new-password']) }}
+			</div>
+		</div>
+	</div>
+</div>
 
 @include('_user.profile.show.form.fields.fields')
 
 {{ html()->hidden('_ipaddress', Request::ip()) }}
 
-<button id="{{ $entity->getEntityKey() }}-submit-button" type="submit"
-        class="btn btn-lg btn-primary pull-right">{{ _lanq('lara-eve::'.$entity->getEntityKey().'.button.submit') }}</button>
+<div class="row mt-24">
+	<div class="col-md-4"></div>
+	<div class="col-md-8">
+		<button id="{{ $entity->getEntityKey() }}-submit-button" type="submit"
+		        class="btn btn-lg btn-primary pull-right">{{ _lanq('lara-eve::'.$entity->getEntityKey().'.button.submit') }}</button>
+	</div>
+</div>
 
 {{ html()->form()->close() }}

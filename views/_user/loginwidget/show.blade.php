@@ -17,13 +17,11 @@
 				</li>
 				<li><hr class="dropdown-divider"></li>
 
-				<!--
 				<li>
 					<a class="dropdown-item" href="{{ route('special.user.profile') }}">
 						{{ _lanq('lara-front::user.menu.profile') }}
 					</a>
 				</li>
-				-->
 
 				@if(Auth::user()->hasLevel(90))
 					<li>
