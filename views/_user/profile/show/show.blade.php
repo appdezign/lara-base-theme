@@ -13,8 +13,11 @@
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-						<h1 class="lara-object-title">{{ $data->page->title }}</h1>
+
+						{!! _header('title', $data->page->title, 'lara-object-title', $data->htag->titleTag, $data->htag->id) !!}
+
 						{!! $data->page->body !!}
+
 					</div>
 				</div>
 
