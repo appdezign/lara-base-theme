@@ -3,7 +3,7 @@
 	   class="btn btn-outline-primary ms-16 px-14 py-10 float-end">
 		<i class="far fa-lg fa-angle-left"></i>
 	</a>
-	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
+	{!! _header('title', $data->object->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 </div>
 
 <div class="row">

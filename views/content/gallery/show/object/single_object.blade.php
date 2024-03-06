@@ -6,8 +6,7 @@
 		<i class="far fa-lg fa-angle-left"></i>
 	</a>
 
-	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
-
+	{!! _header('title', $data->object->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 	{{-- MEDIA GALLERY --}}
 	@if($data->object->hasGallery())

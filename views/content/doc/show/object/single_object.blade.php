@@ -1,5 +1,5 @@
 <div class="mt-24 pt-lg-8 pb-16">
-	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
+	{!! _header('title', $data->object->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 </div>
 
 <table class="table">

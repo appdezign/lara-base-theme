@@ -5,7 +5,7 @@
 		<i class="far fa-lg fa-angle-left"></i>
 	</a>
 
-	{!! _header('title', $data->page->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
+	{!! _header('title', $data->object->title, 'pb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 	<div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-16">
 		<div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-24">
