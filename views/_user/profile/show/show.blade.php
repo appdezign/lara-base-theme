@@ -12,7 +12,7 @@
 			<div class="{{ $grd->contentCols }} main-content">
 
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+					<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
 						{!! _header('title', $data->page->title, 'lara-object-title', $data->htag->titleTag, $data->htag->id) !!}
 
@@ -22,7 +22,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+					<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 						@include('_user.profile.show.form.form')
 					</div>
 				</div>
