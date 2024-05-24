@@ -59,53 +59,36 @@
 }
 
 @media only screen and (min-width: 320px) {
-	.hero-caption-bg {
-		&.hero-caption-bg-fade {
-			.hero-caption-bottom {
-				font-size: 20px;
-			}
-		}
+	.hero-caption-bottom {
+		font-size: 20px;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	.hero-caption-bg {
-		&.hero-caption-bg-fade {
-			.hero-caption-bottom {
-				font-size: 22px;
-			}
-		}
+	.hero-caption-bottom {
+		font-size: 22px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	.hero-caption-bg {
-		&.hero-caption-bg-fade {
-			.hero-caption-bottom {
-				font-size: 24px;
-			}
-		}
+	.hero-caption-bottom {
+		font-size: 24px;
 	}
+
 }
 
 @media only screen and (min-width: 992px) {
-	.hero-caption-bg {
-		&.hero-caption-bg-fade {
-			.hero-caption-bottom {
-				font-size: 26px;
-			}
-		}
+	.hero-caption-bottom {
+		font-size: 26px;
 	}
+
 }
 
 @media only screen and (min-width: 1200px) {
-	.hero-caption-bg {
-		&.hero-caption-bg-fade {
-			.hero-caption-bottom {
-				font-size: 28px;
-			}
-		}
+	.hero-caption-bottom {
+		font-size: 28px;
 	}
+
 }
 
 .payoff {
@@ -155,10 +138,6 @@
 	}
 
 	.payoff-content {
-		font-size: 16px;
-		p {
-			color: $white !important;
-		}
 		h2 {
 			font-size: 24px;
 			font-weight: 800;
@@ -174,7 +153,6 @@
 @media(min-width: 480px) {
 	.payoff {
 		.payoff-content {
-			font-size: 24px;
 			h2 {
 				font-size: 36px;
 			}
@@ -206,7 +184,6 @@
 		}
 
 		.payoff-content {
-			font-size: 32px;
 			h2 {
 				font-size: 48px;
 			}
@@ -227,7 +204,6 @@
 			}
 		}
 		.payoff-content {
-			font-size: 42px;
 			h2 {
 				font-size: 60px;
 			}
