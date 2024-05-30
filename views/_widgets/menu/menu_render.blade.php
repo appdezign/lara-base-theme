@@ -32,11 +32,22 @@ if ($node->isRoot()) {
 
 	@if($nodeHasChildren)
 		<li class="nav-item dropdown" id="menu-item-{{ $node->id }}">
-			<a href="#"
-			   class="nav-link dropdown-toggle @if(in_array($node->id, $activemenu)) active @endif"
-			   data-bs-toggle="dropdown">
-				{{ $node->title }}
-			</a>
+			@if(empty($node->route))
+				{{-- folder --}}
+				<a href="#"
+				   class="nav-link dropdown-toggle @if(in_array($node->id, $activemenu)) active @endif"
+				   data-bs-toggle="dropdown">
+					{{ $node->title }}
+				</a>
+			@else
+				{{-- clickable folder --}}
+				<a href="{{ url($lang . '/' . $node->route) }}"
+				   class="nav-link dropdown-toggle @if(in_array($node->id, $activemenu)) active @endif"
+				   data-bs-toggle="dropdown">
+					{{ $node->title }}
+				</a>
+			@endif
+
 
 			<ul class="dropdown-menu" id="menu-item-{{ $node->id }}-submenu">
 				<li>
