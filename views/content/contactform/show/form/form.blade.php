@@ -3,6 +3,12 @@
 	{!! Theme::css('vendor/flatpickr/flatpickr.min.css') !!}
 @endsection
 
+<div class="row">
+	<div class="col-12 text-end">
+		* = {{ _lanq('lara-front::default.form.required') }}
+	</div>
+</div>
+
 {{ html()->form('POST', null)
 		->id($entity->getEntityKey() . '-form')
 		->attributes(['accept-charset' => 'UTF-8'])
@@ -25,6 +31,9 @@
 
 			<div class="col-12 mt-24">
 				{{ html()->label(_lanq('lara-eve::'.$entity->getEntityKey().'.column.' .$cvar->fieldname) .':', $cvar->fieldname)->class('form-label fs-base') }}
+				@if($cvar->required)
+					<span class="field-required color-dark">*</span>
+				@endif
 
 				@if($cvar->fieldtype == 'string')
 					{{ html()->text($cvar->fieldname, null)
