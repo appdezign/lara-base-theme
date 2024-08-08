@@ -4,6 +4,8 @@
 	{!! Theme::js('js/app.js?ver='.date("YmdHis")) !!}
 @endif
 
+{!! Theme::js('vendor/jscookie/js.cookie.js') !!}
+
 <script>
 	let dropdownParents = document.querySelectorAll('[data-bs-toggle="dropdown"]');
 	dropdownParents.forEach(el => {
