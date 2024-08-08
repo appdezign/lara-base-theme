@@ -5,10 +5,12 @@
 // Import Google Fonts (Manrope)
 @import url($path-to-fonts);
 
+/*
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*/
 
 // Sticky footer
 html, body {
