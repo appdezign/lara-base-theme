@@ -4,8 +4,8 @@
  * Theme styles
 */
 
-// User variables
-@import 'user-variables';
+// Custom variables
+@import 'custom-variables';
 
 // Configuration & utilities
 @import 'silicon-variables';
@@ -64,5 +64,5 @@
 // Dark mode
 @import 'dark-mode';
 
-// User custom styles
-@import 'user';
+// Custom custom styles
+@import 'custom';

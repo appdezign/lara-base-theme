@@ -29,7 +29,11 @@
 						@widget('laraEntityWidget', ['widget_id' => $larawidget->id, 'grid' => $data->grid])
 					@endif
 				@else
-					@widget('laraTextWidget', ['widget_id' => $larawidget->id, 'grid' => $data->grid])
+					@if($larawidget->usecache)
+						@widget('laraTextCacheWidget', ['widget_id' => $larawidget->id, 'grid' => $data->grid])
+					@else
+						@widget('laraTextWidget', ['widget_id' => $larawidget->id, 'grid' => $data->grid])
+					@endif
 				@endif
 
 			@endif
