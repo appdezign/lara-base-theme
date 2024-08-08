@@ -195,36 +195,6 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 })();
 
 /**
- * Element parallax effect
- * @requires https://github.com/dixonandmoe/rellax
- */
-(function () {
-	const el = document.querySelector('.rellax');
-
-	if (el === null) return;
-
-	const rellax = new Rellax('.rellax', {
-		horizontal: true
-	});
-
-})();
-
-
-/**
- * Mouse move parallax effect
- * @requires https://github.com/wagerfield/parallax
- */
-(function () {
-
-	let element = document.querySelectorAll('.parallax');
-
-	for (let i = 0; i < element.length; i++) {
-		let parallaxInstance = new Parallax(element[i]);
-	}
-
-})();
-
-/**
  * Content carousel with extensive options to control behaviour and appearance
  * @requires https://github.com/nolimits4web/swiper
  */
