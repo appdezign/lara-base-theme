@@ -50,11 +50,9 @@ if ($node->isRoot()) {
 
 
 			<ul class="dropdown-menu" id="menu-item-{{ $node->id }}-submenu">
-				<li>
-					@foreach ($node->children as $node)
-						@include('_widgets.menu.menu_render', $node)
-					@endforeach
-				</li>
+				@foreach ($node->children as $node)
+					@include('_widgets.menu.menu_render', $node)
+				@endforeach
 			</ul>
 		</li>
 	@else
