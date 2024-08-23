@@ -20,8 +20,12 @@
 							{!! _header('title', $data->object->title, 'h1 mb-lg-24 mb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 							<p class="mb-24 pb-lg-16 fs-lg">{!! $data->object->body !!}</p>
-							<a href="{{ route($data->eroutes['page']['about']) }}"
-							   class="btn btn-lg btn-outline-primary">More about us</a>
+
+							@if(array_key_exists('about', $data->eroutes['page']))
+								<a href="{{ route($data->eroutes['page']['about']) }}"
+								   class="btn btn-lg btn-outline-primary">More about us</a>
+							@endif
+
 						</div>
 					</div>
 				@else
@@ -31,8 +35,12 @@
 							{!! _header('title', $data->object->title, 'h1 mb-lg-24 mb-16', $data->htag->titleTag, $data->htag->id) !!}
 
 							<p class="mb-24 pb-lg-16 fs-lg">{!! $data->object->body !!}</p>
-							<a href="{{ route($data->eroutes['page']['about']) }}"
-							   class="btn btn-lg btn-outline-primary">More about us</a>
+
+							@if(array_key_exists('about', $data->eroutes['page']))
+								<a href="{{ route($data->eroutes['page']['about']) }}"
+								   class="btn btn-lg btn-outline-primary">More about us</a>
+							@endif
+
 						</div>
 					</div>
 				@endif
