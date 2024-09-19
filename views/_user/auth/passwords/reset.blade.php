@@ -1,0 +1,77 @@
+@extends('layout_auth')
+
+@section('content')
+
+	<div class="d-flex h-100 justify-content-center align-items-center">
+		<div class="card shadow-sm" style="width: 360px; max-width: 100%;">
+
+			<div class="card-header d-flex justify-content-start ">
+				{!! Theme::img('images/lara8-logo.svg', 'Lara CMS', 'me-16', ['width' => '48']) !!}
+				<h1 class="fs-18 mt-12">
+					{{ ucfirst(_lanq('lara-common::auth.passwordforgot.password_reset_title')) }}
+				</h1>
+			</div>
+
+			<div class="card-body">
+
+				@if ($errors->any())
+					<div class="alert alert-danger">
+						<ul class="">
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
+
+				@if (session('status'))
+					<div class="alert alert-success alert-important mb-6" role="alert">
+						{{ session('status') }}
+					</div>
+				@endif
+
+				@if($email)
+
+					<form class="form-horizontal" role="form" method="POST"
+					      action="{{ route('password.request') }}">
+
+						{{ csrf_field() }}
+
+						<input type="hidden" name="token" value="{{ $token }}">
+
+						<input id="email" type="hidden" name="email" value="{{ $email }}">
+
+						<div class="fv-row mb-24">
+							<label for="password">{{ _lanq('lara-common::auth.field.password') }}</label>
+
+							<input id="password" type="password" class="form-control" name="password"
+							       required>
+						</div>
+
+						<div class="fv-row mb-24">
+							<label for="password-confirm">{{ _lanq('lara-common::auth.field.confirm_password') }}</label>
+							<input id="password-confirm" type="password" class="form-control"
+							       name="password_confirmation" required>
+
+						</div>
+
+						<div class="d-grid">
+							<button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+								<span class="indicator-label">
+									{{ _lanq('lara-common::auth.button.reset_password') }}
+								</span>
+							</button>
+						</div>
+
+					</form>
+				@else
+					<div class="alert alert-warning">
+						{{ _lanq('lara-common::auth.field.email_not_found') }}
+					</div>
+				@endif
+
+			</div>
+		</div>
+	</div>
+
+@endsection
