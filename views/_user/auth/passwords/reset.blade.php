@@ -39,20 +39,20 @@
 
 						<input type="hidden" name="token" value="{{ $token }}">
 
-						<input id="email" type="hidden" name="email" value="{{ $email }}">
+						<div class="fv-row mb-24">
+							<label for="password">{{ _lanq('lara-common::auth.field.email') }}</label>
+							<input id="email" name="email" type="email" value="{{ $email }}" class="form-control" disabled>
+							<input id="email" type="hidden" name="email" value="{{ $email }}">
+						</div>
 
 						<div class="fv-row mb-24">
 							<label for="password">{{ _lanq('lara-common::auth.field.password') }}</label>
-
-							<input id="password" type="password" class="form-control" name="password"
-							       required>
+							<input id="password" name="password" type="password" class="form-control" required>
 						</div>
 
 						<div class="fv-row mb-24">
 							<label for="password-confirm">{{ _lanq('lara-common::auth.field.confirm_password') }}</label>
-							<input id="password-confirm" type="password" class="form-control"
-							       name="password_confirmation" required>
-
+							<input id="password-confirm" name="password_confirmation" type="password" class="form-control"  required>
 						</div>
 
 						<div class="d-grid">

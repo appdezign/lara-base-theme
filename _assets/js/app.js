@@ -386,6 +386,15 @@ import lgFullscreen from 'lightgallery/plugins/fullscreen';
 				if (!form.checkValidity()) {
 					event.preventDefault()
 					event.stopPropagation()
+
+					var errorElements = document.querySelectorAll(
+						"input.form-control:invalid");
+					var errorElement = errorElements[0];
+
+					errorElement.scrollIntoView({
+						behavior: 'smooth',
+					})
+
 				}
 
 				form.classList.add('was-validated')

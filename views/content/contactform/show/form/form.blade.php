@@ -12,7 +12,7 @@
 {{ html()->form('POST', null)
 		->id($entity->getEntityKey() . '-form')
 		->attributes(['accept-charset' => 'UTF-8'])
-		->class('lara-system-form needs-validation needs-custom-validation')
+		->class('lara-system-form needs-validation')
 		->novalidate()
 		->open() }}
 
