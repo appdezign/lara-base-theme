@@ -13,7 +13,7 @@
 			</div>
 		@else
 			<div class="col-md-5 bg-position-center bg-repeat-0 bg-size-cover"
-			     style="background-image: url('https://via.placeholder.com/960x960/e8ecf0/d4d8dc?text=Lara+CMS'); min-height: 20rem;">
+			     style="background-image: url('https://dummyimage.com/960x960/e8ecf0/d4d8dc?text=Lara+CMS'); min-height: 20rem;">
 
 			</div>
 		@endif

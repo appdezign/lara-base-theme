@@ -11,7 +11,7 @@
 				</div>
 			@else
 				<div class="col-md-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-				     style="background-image: url('https://via.placeholder.com/960x960/e8ecf0/d4d8dc?text=Lara+CMS'); min-height: 15rem;">
+				     style="background-image: url('https://dummyimage.com/960x960/e8ecf0/d4d8dc?text=Lara+CMS'); min-height: 15rem;">
 					<a href="{{ route($entity->getActiveRoute() . '.show', $obj->routeVars) }}"
 					   class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
 				</div>
