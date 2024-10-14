@@ -11,8 +11,8 @@ if (config('app.env') != 'production') {
 
 <!-- Logo -->
 <a href="/{{ $language }}/" class="navbar-brand pe-16">
-	{!! Theme::img('images/lara-logo-2023.svg', 'Silicon', '', ['width' => '47']) !!}
-	Lara 7
+	{!! Theme::img('images/lara8-logo.svg', 'Silicon', '', ['width' => '47']) !!}
+	Lara 8
 </a>
 
 <!-- Main Menu -->
