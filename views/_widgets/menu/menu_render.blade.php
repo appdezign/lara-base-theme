@@ -1,5 +1,6 @@
 <?php
 $lang = LaravelLocalization::getCurrentLocale();
+$navlink = ($node->type == 'url') ? $node->url : url($lang . '/' . $node->route);
 
 if ($node->isLeaf() || sizeof($node->children) == 0) {
 	$nodeHasChildren = false;
@@ -41,7 +42,7 @@ if ($node->isRoot()) {
 				</a>
 			@else
 				{{-- clickable folder --}}
-				<a href="{{ url($lang . '/' . $node->route) }}"
+				<a href="{{ $navlink }}"
 				   class="nav-link dropdown-toggle @if(in_array($node->id, $activemenu)) active @endif"
 				   data-bs-toggle="dropdown">
 					{{ $node->title }}
@@ -58,14 +59,14 @@ if ($node->isRoot()) {
 	@else
 		@if($node->depth > 1)
 			<li id="menu-item-{{ $node->id }}">
-				<a href="{{ url($lang . '/' . $node->route) }}"
+				<a href="{{ $navlink }}"
 				   class="dropdown-item @if(in_array($node->id, $activemenu)) active @endif">
 					{{ $node->title }}
 				</a>
 			</li>
 		@else
 			<li class="nav-item" id="menu-item-{{ $node->id }}">
-				<a href="{{ url($lang . '/' . $node->route) }}"
+				<a href="{{ $navlink }}"
 				   class="nav-link @if(in_array($node->id, $activemenu)) active @endif">
 					{{ $node->title }}
 				</a>
