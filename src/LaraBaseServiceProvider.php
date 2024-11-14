@@ -20,7 +20,6 @@ class LaraBaseServiceProvider extends ServiceProvider
 			__DIR__.'/../_assets/_public/fonts' => public_path('assets/themes/base/fonts'),
 			__DIR__.'/../_assets/_public/images' => public_path('assets/themes/base/images'),
 			__DIR__.'/../_assets/_public/vendor' => public_path('assets/themes/base/js/vendor'),
-			__DIR__.'/../_assets/_public/media' => public_path('assets/media'),
 		], 'lara');
 
 	}
