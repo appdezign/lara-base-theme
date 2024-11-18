@@ -130,8 +130,8 @@
 				@if($cvar->fieldtype == 'yesno')
 					<div class="d-flex">
 						<label class="radio-inline">
-							{{ html()->radio($cvar->fieldname, null, 0)
-								->id($cvar->fieldname.'_0')
+							{{ html()->radio($cvar->fieldname, null, 1)
+								->id($cvar->fieldname.'_1')
 								->class('form-check-input')
 								->if($cvar->required, function ($el) {
 									return $el->required();
@@ -139,8 +139,8 @@
 							{{ _lanq('lara-admin::default.value.yes') }}
 						</label>
 						<label class="radio-inline">
-							{{ html()->radio($cvar->fieldname, null, 1)
-								->id($cvar->fieldname.'_1')
+							{{ html()->radio($cvar->fieldname, null, 0)
+								->id($cvar->fieldname.'_0')
 								->class('form-check-input')
 								->if($cvar->required, function ($el) {
 									return $el->required();
