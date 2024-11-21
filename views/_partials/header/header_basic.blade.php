@@ -2,7 +2,11 @@
 <header class="header navbar navbar-expand-lg bg-light d-block">
 	<div class="container px-16">
 
-		@include('_partials.header.content.header_content')
+		@if(config('lara.auth.has_front_auth'))
+			@include('_partials.header.content.header_auth_content')
+		@else
+			@include('_partials.header.content.header_content')
+		@endif
 
 	</div>
 
