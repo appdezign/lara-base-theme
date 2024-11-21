@@ -1,3 +1,14 @@
+<?php
+if (config('app.env') != 'production') {
+	$redirectRoute = Route::current()->getName();
+	$redirectSlug = null;
+	if ($entity->getEntityKey() != 'page' && isset($data->object->slug)) {
+		$redirectRoute = Route::current()->getName();
+		$redirectSlug = $data->object->slug;
+	}
+}
+?>
+
 <!-- Logo -->
 <a href="/{{ $language }}/" class="navbar-brand pe-16">
 	{!! Theme::img('images/lara8-logo.svg', 'Silicon', '', ['width' => '47']) !!}
@@ -25,8 +36,26 @@
 	</a>
 </div>
 
+@if(config('app.env') != 'production')
+	<a href="{{ route('special.cache.clear', ['redirect' => $redirectRoute, 'slug' => $redirectSlug]) }}"
+	   class="btn btn-outline-primary btn-sm fs-14 rounded d-none d-sm-inline-flex me-16">
+		<i class="fad fa-database fs-16 lh-1"></i>
+	</a>
+@endif
+
+@if(config('lara.auth.has_front_auth'))
+	<hx:include src="/loginwidget/menu?returnto={{ url()->current() }}"></hx:include>
+@endif
+
 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 </button>
 
+{{ html()->form('POST', route('logout'))
+	->id('logout-form')
+	->attributes(['accept-charset' => 'UTF-8'])
+	->open() }}
+<hx:include src="/csrf/input"></hx:include>
+{{ html()->hidden('redirect', 'special.home.show') }}
+{{ html()->form()->close() }}
