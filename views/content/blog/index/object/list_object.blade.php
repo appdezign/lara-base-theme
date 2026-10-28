@@ -21,7 +21,7 @@
 				<div class="card-body">
 					<div class="d-flex align-items-center mb-16">
 						<span class="fs-14 text-muted pe-16 me-16 border-end">
-							{{ Date::parse($obj->publish_from)->format('j F Y') }}
+							{{ \Carbon\Carbon::parse($obj->publish_from)->translatedFormat('j F Y') }}
 						</span>
 						@foreach($obj->tags->where('taxonomy_id', 2) as $tag)
 							<a href="#"
@@ -42,7 +42,7 @@
 				<div class="card-body">
 					<div class="d-flex align-items-center mb-16">
 						<span class="fs-14 text-muted pe-16 me-16 border-end">
-							{{ Date::parse($obj->publish_from)->format('j F Y') }}
+							{{ \Carbon\Carbon::parse($obj->publish_from)->translatedFormat('j F Y') }}
 						</span>
 						@foreach($obj->tags->where('taxonomy_id', 2) as $tag)
 							<a href="#"
