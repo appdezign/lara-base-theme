@@ -12,7 +12,7 @@
 	<div class="card-body pb-24">
 		<div class="d-flex align-items-center justify-content-between mb-16">
 			<span class="fs-14 text-muted">
-				{{ Date::parse($obj->publish_from)->format('j F Y') }}
+				{{ \Carbon\Carbon::parse($obj->publish_from)->translatedFormat('j F Y') }}
 			</span>
 			@foreach($obj->tags->where('taxonomy_id', 2) as $tag)
 				<a href="#" class="badge fs-14 text-nav bg-secondary text-decoration-none">{{ $tag->title }}</a>

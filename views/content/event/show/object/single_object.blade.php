@@ -10,7 +10,7 @@
 	<div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-16">
 		<div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-24">
 			<div class="fs-14 border-end pe-16 me-16 mb-8">
-				{{ Date::parse($data->object->startdate)->format('j F Y') }}
+				{{ \Carbon\Carbon::parse($data->object->startdate)->translatedFormat('j F Y') }}
 			</div>
 		</div>
 	</div>
@@ -96,7 +96,7 @@
 				<td class="d-none d-md-table-cell event-table-white">&nbsp;</td>
 				<td class="event-table-white">Datum</td>
 				<td class="event-table-white">
-					{{ Date::parse($data->object->startdate)->format('j F Y') }}
+					{{ \Carbon\Carbon::parse($data->object->startdate)->translatedFormat('j F Y') }}
 				</td>
 			</tr>
 			@if($data->object->starttime != '00:00:00')
@@ -120,7 +120,7 @@
 				<td class="d-none d-md-table-cell event-table-white">&nbsp;</td>
 				<td class="event-table-white">Startdatum</td>
 				<td class="event-table-white">
-					{{ Date::parse($data->object->startdate)->format('j F Y') }}
+					{{ \Carbon\Carbon::parse($data->object->startdate)->translatedFormat('j F Y') }}
 					@if($data->object->starttime != '00:00:00')
 						&nbsp;-&nbsp;
 						{{ Carbon\Carbon::parse( $data->object->starttime)->format('H:i') }}
@@ -132,7 +132,7 @@
 				<td class="d-none d-md-table-cell event-table-white">&nbsp;</td>
 				<td class="event-table-white">Enddatum</td>
 				<td class="event-table-white">
-					{{ Date::parse($data->object->enddate)->format('j F Y') }}
+					{{ \Carbon\Carbon::parse($data->object->enddate)->translatedFormat('j F Y') }}
 					@if($data->object->endtime != '00:00:00')
 						&nbsp;-&nbsp;
 						{{ Carbon\Carbon::parse( $data->object->endtime)->format('H:i') }}

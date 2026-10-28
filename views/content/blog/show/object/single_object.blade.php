@@ -8,7 +8,7 @@
 	<div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-16">
 		<div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-24">
 			<div class="fs-14 border-end pe-16 me-16 mb-8">
-				{{ Date::parse($data->object->publish_from)->format('j F Y') }}
+				{{ \Carbon\Carbon::parse($data->object->publish_from)->translatedFormat('j F Y') }}
 			</div>
 			<div class="fs-14 pe-16 me-16 mb-8">
 				@foreach($data->object->tags->where('taxonomy_id', 2) as $tag)
